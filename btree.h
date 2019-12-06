@@ -46,6 +46,20 @@ private:
         temp->children[i]->SimpleInsertion(key);
         root = temp;
     }
+    void ClearRoot() {
+        auto tmp = root;
+        if(root->isLeaf)
+            root = nullptr;
+        else {
+            root = root->children[0];
+
+            if(root->isLeaf ) {
+                root = nullptr;
+                delete root;
+            }
+        }
+        delete tmp;
+    }
 
 public:
 
@@ -73,28 +87,15 @@ public:
 
 
     bool Remove(int key) {
-        bool result=false;
-
+        bool flag=false;
         if(!root)
             throw runtime_error("Empty three");
 
-        result = root->RemoveLogic(key);
+        flag = root->RemoveLogic(key);
 
-        if(!root->Actuales) {
-            auto tmp = root;
-            if(root->isLeaf)
-                root = nullptr;
-            else {
-                root = root->children[0];
-
-                if(root->isLeaf ) {
-                    root = nullptr;
-                    delete root;
-                }
-            }
-            delete tmp;
-        }
-        return result;
+        if(!root->Actuales)
+            ClearRoot();
+        return flag;
     }
 
     void Print() {
