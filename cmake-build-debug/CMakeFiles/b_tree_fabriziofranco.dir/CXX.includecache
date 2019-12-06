@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/fabrizio/Desktop/ADS/b-tree-fabriziofranco/btree.h
+node.h
+/home/fabrizio/Desktop/ADS/b-tree-fabriziofranco/node.h
+
+/home/fabrizio/Desktop/ADS/b-tree-fabriziofranco/main.cpp
+iostream
+-
+btree.h
+/home/fabrizio/Desktop/ADS/b-tree-fabriziofranco/btree.h
+
+/home/fabrizio/Desktop/ADS/b-tree-fabriziofranco/node.h
+vector
+-
+cmath
+-
+
