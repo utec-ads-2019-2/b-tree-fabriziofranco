@@ -8,13 +8,19 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "main.cpp",
-                "-o", "tree.out"
+                "-std=c++14",
+                "-g",
+                "main.cpp",
+                "-o",
+                "tree.out"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }

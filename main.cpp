@@ -11,6 +11,7 @@ int main(int argc, char *argv[]) {
 
     TesterTree.Print();
 
+    // El destructor está generando un error de punteros, probablemente tengas un puntero que queda libre desde el insert 
     for(auto i=0;i<=10;i+=2)
         TesterTree.Remove(i);
 
